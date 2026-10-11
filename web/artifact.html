@@ -1,0 +1,30 @@
+<title>振るガチャ</title>
+<style>
+  /* レイアウト: Flutterアプリが画面全体を占める1画面構成(ダーク固定) */
+  :root {
+    --bg: #141218;
+    --fg: #e6e0e9;
+    --muted: #cac4d0;
+    color-scheme: dark;
+  }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Noto Sans JP", "Yu Gothic UI", "Hiragino Sans", Meiryo, sans-serif;
+  }
+  #loading {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 16px;
+    color: var(--muted);
+    font-size: 1rem;
+    text-align: center;
+  }
+  flutter-view ~ #loading, body:has(flutter-view) #loading { display: none; }
+</style>
+<div id="loading">振るガチャを読み込み中…</div>
+<script src="flutter_bootstrap.js" async></script>
